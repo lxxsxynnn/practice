@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Get a Parameter Value by a Command Object Using @ModelAttribute</h1>
+    <h3>Modify Menu</h3>
+    <form action="search" method="post">
+        Name of the Menu You Want to Find : <input type="text" name="menuName"><br>
+        Price of the Menu You Want to Find : <input type="number" name="menuPrice"><br>
+        Category of the Menu You Want to Find :
+        <select name="categoryCode">
+            <option value="1">Meal</option>
+            <option value="2">Beverage</option>
+            <option value="3">Dessert</option>
+        </select><br>
+        Status of the Menu You Want to find : <input type="text" name="orderableStatus">
+        <input type="submit" value="search">
+    </form>
+</body>
+</html>

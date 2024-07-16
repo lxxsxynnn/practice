@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Connect View By Using View Resolver</h1>
+
+    <h3>Return the Name of View as String</h3>
+    <button onclick="location.href='string'">Return View's Name as String</button>
+
+    <h3>Redirect to String</h3>
+    <button onclick="location.href='string-redirect'">Return View's Name as String and Redirect</button>
+
+    <h3>Add FlashAttribute while Returning View Name as String</h3>
+    <button onclick="location.href='string-redirect-attr'">Returning View Name as String * Using flashAttr</button>
+    <script>
+        const flashMessage1 = '[[${ flashMessage1 }]]';
+        if(flashMessage1){
+            alert(flashMessage1);
+        }
+    </script>
+
+    <h3>Set View's Name as ModelAndView and Return</h3>
+    <button onclick="location.href='modelandview'">Set View's Name as ModelAndView and Return</button>
+
+    <h3>Return View's Name as ModelAndView and Redirect</h3>
+    <button onclick="location.href='modelandview-redirect'">Return View's Name as ModelAndView and Redirect</button>
+
+    <h3>Return View's Name as ModelAndView and Redirect & Use flashAttr</h3>
+    <button onclick="location.href='modelandview-redirect-attr'">Return View's Name as ModelAndView and Redirect & Using flashAttr</button>
+    <script>
+        const flashMessage2 = '[[${ flashMessage2 }]]';
+        if(flashMessage2){
+            alert(flashMessage2);
+        }
+    </script>
+</body>
+</html>

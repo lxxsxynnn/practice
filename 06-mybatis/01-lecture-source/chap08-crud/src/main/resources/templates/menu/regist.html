@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regist</title>
+</head>
+<body>
+    <div th:include="common/header.html"></div>
+    <h3>Create a New Menu</h3>
+    <form action="/menu/regist" method="post">
+        <label>Menu Name : </label><input type="text" name="name"><br>
+        <label>Menu Price : </label><input type="number" name="price"><br>
+        <label>Category Code : </label><select name="categoryCode" id="categoryCode"></select><br>
+        <label>Availability Status : </label><select name="orderableStatus">
+        <option value="Y">Y</option>
+        <option value="N">N</option>
+        </select><br>
+        <input type="submit" value="SUBMIT">
+    </form>
+
+<script>
+    fetch("/menu/category")
+        .then(res => res.json())
+        .then(data => {const $categoryCode = document.getElementById('categoryCode');
+
+            for(let index in data) {
+                const $option = document.createElement('option');
+                $option.value = data[index].code;
+                $option.textContent = data[index].name;
+
+                $categoryCode.appendChild($option);
+            }
+    });
+</script>
+</body>
+</html>
